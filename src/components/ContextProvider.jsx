@@ -15,6 +15,11 @@ const initialstate = [
       {
         taskId: 0,
         name: "Hello",
+        checked: false,
+      },
+      {
+        taskId: 1,
+        name: "World",
         checked: true,
       },
     ],
@@ -29,7 +34,7 @@ const ContextProvider = (props) => {
   const [state, setState] = useState(initialstate)
   const [isDisplay, setDisplay] = useState(0)
   const [nextPartsId, setNextPartsId] = useState(1)
-  const [nextTasksId, setNextTaskId] = useState(1)
+  const [nextTasksId, setNextTaskId] = useState(2)
 
   const validationStringSchema = yup.object().shape({
     title: yup.string().required(),
